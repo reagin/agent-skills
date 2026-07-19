@@ -1,0 +1,55 @@
+# macOS
+.AppleDouble
+.DS_Store
+.LSOverride
+
+# Python bytecode / caches
+__pycache__/
+*$py.class
+*.py[cod]
+*.so
+
+# Virtual environments
+.venv/
+ENV/
+env/
+venv/
+
+# Packaging / build
+.eggs/
+build/
+dist/
+*.egg
+*.egg-info/
+
+# Test / coverage
+.mypy_cache/
+.nox/
+.pytest_cache/
+.ruff_cache/
+.tox/
+htmlcov/
+.coverage
+.coverage.*
+*.cover
+coverage.xml
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Editors / IDEs
+.idea/
+.vscode/
+*~
+*.sw[op]
+
+# Logs / temp
+.cache/
+temp/
+tmp/
+*.log
+
+# skill-creator evaluation workspaces
+skills/*-workspace/
