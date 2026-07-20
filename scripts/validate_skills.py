@@ -220,7 +220,7 @@ def discover_skills(root: Path) -> Tuple[List[Skill], List[Issue]]:
     issues: List[Issue] = []
     seen_names: Dict[str, Path] = {}
     for entry in sorted(skills_dir.iterdir(), key=lambda path: path.name):
-        if not entry.is_dir() or entry.name.endswith("-workspace"):
+        if not entry.is_dir():
             continue
         skill, skill_issues = _validate_skill(entry)
         issues.extend(skill_issues)

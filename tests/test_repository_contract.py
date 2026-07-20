@@ -11,7 +11,6 @@ ROOT = Path(__file__).resolve().parents[1]
 class RepositoryContractTests(unittest.TestCase):
     def test_required_scaffold_and_shared_versions(self):
         required = [
-            "skills/README.md",
             "AGENTS.md",
             "CLAUDE.md",
             ".gitignore",

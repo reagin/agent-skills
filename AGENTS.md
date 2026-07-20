@@ -6,13 +6,27 @@ This is a public personal skills repository for Codex and Claude Code. CC Switch
 
 ## Skill authoring
 
-- Create each published skill at `skills/<skill-name>/SKILL.md`.
+`skills/` contains only skill directories—no top-level README or sibling workspace folders. CC Switch scans recursively for `SKILL.md`, but this repository accepts published skills only at `skills/<skill-name>/SKILL.md`.
+
+```text
+skills/
+└── skill-name/
+    ├── SKILL.md
+    ├── agents/openai.yaml   # optional; Codex UI / invocation extras
+    ├── assets/              # optional; only when the skill needs them
+    ├── references/          # optional; only when SKILL.md links them
+    ├── scripts/             # optional; only when the skill runs them
+    ├── evals/               # optional; skill-creator eval specs (gitignored)
+    └── workspace/           # optional; skill-creator eval workspace (gitignored)
+```
+
 - Use lowercase kebab-case for the directory and make it match the frontmatter `name`.
 - Keep one portable `SKILL.md` for both Codex and Claude Code.
 - Use only the shared top-level fields `name`, `description`, `license`, `compatibility`, `metadata`, and `allowed-tools`.
 - Put Codex-specific UI or dependency metadata in `agents/openai.yaml` inside the skill when needed.
-- Add `scripts/`, `references/`, `assets/`, and `evals/` only when the skill actually uses them.
-- Keep temporary `skill-creator` evaluation workspaces beside the skill as `<skill-name>-workspace/`; they are ignored by Git.
+- Publish only what the skill needs at runtime: typically `SKILL.md`, plus optional `agents/`, `scripts/`, `references/`, or `assets/`. Do not create empty resource directories to reserve structure.
+- Keep `skill-creator` evaluation artifacts local and untracked: `skills/<skill-name>/workspace/` and `skills/<skill-name>/evals/` are gitignored. Do not place `<skill-name>-workspace/` beside the skill.
+- When a skill interviews the user, try the host structured-input tool for option cards (`request_user_input`, `AskUserQuestion`, or equivalent); if unavailable, fall back to A/B/C in chat and allow a free-form answer.
 
 ## Skill lifecycle synchronization
 

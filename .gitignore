@@ -51,5 +51,6 @@ temp/
 tmp/
 *.log
 
-# skill-creator evaluation workspaces
-skills/*-workspace/
+# skill-creator local evaluation artifacts (not published with skills)
+skills/*/workspace/
+skills/*/evals/

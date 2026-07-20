@@ -27,7 +27,7 @@ A focused, public skills repository for personal development with Codex and Clau
 └── README.md                  # Repository guide and skill catalog
 ```
 
-Each published skill lives at `skills/<skill-name>/SKILL.md`. Optional `scripts/`, `references/`, `assets/`, `agents/openai.yaml`, and evaluation files belong inside that skill and are created only when needed.
+Each published skill lives at `skills/<skill-name>/SKILL.md`. Optional runtime companions (`scripts/`, `references/`, `assets/`, `agents/openai.yaml`) belong inside that skill and are created only when needed. Local `skill-creator` evaluation artifacts live at `skills/<skill-name>/workspace/` and `skills/<skill-name>/evals/` and are gitignored — do not commit them. See [`AGENTS.md`](AGENTS.md) for authoring rules.
 
 ## Distribution model
 
@@ -41,7 +41,7 @@ The Codex and Claude Code plugin manifests both point to the same `skills/` dire
 
 | Skill | Description |
 | --- | --- |
-| [frontend-file-structure](skills/frontend-file-structure/SKILL.md) | Use for React TypeScript file-structure work involving ownership or folders for new or moved files, multi-file components with narrow public entries, page and route separation, mirrored tests, path naming, import aliases, or directory-tree review. Trigger only when placement is unresolved or structure must change. Do not use for UI, logic, performance, security, upgrades, or debugging, or for code and tests whose path and structure are already established. |
+| [frontend-file-structure](skills/frontend-file-structure/) | Use for React TypeScript file-structure work involving ownership or folders for new or moved files, multi-file components with narrow public entries, page and route separation, mirrored tests, path naming, import aliases, or directory-tree review. Trigger only when placement is unresolved or structure must change. Do not use for UI, logic, performance, security, upgrades, or debugging, or for code and tests whose path and structure are already established. |
 
 <!-- skills:end -->
 
@@ -54,9 +54,10 @@ When using `skill-creator` to create or improve a skill:
 1. Store the skill under `skills/<skill-name>/` and keep `SKILL.md` as its entry point.
 2. Prefer shared `name` and `description` metadata that works in both Codex and Claude Code.
 3. Add platform-specific metadata only when the skill genuinely requires it.
-4. Update this catalog with the repository validator.
-5. Bump both fallback plugin manifests to the same version when the distributed skill set changes.
-6. Run the validator and its tests before considering the skill complete.
+4. Keep `skill-creator` eval workspaces and `evals/` specs under the skill directory; both paths are gitignored and must not be committed. Do not use sibling `*-workspace/` directories.
+5. Update this catalog with the repository validator.
+6. Bump both fallback plugin manifests to the same version when the distributed skill set changes.
+7. Run the validator and its tests before considering the skill complete.
 
 Version fallback plugins consistently:
 
