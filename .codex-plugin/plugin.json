@@ -1,6 +1,6 @@
 {
   "name": "agent-skills",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Portable personal development skills for Codex and Claude Code.",
   "skills": "./skills/"
 }

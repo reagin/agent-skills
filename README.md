@@ -39,7 +39,9 @@ The Codex and Claude Code plugin manifests both point to the same `skills/` dire
 
 <!-- skills:start -->
 
-No skills have been published yet.
+| Skill | Description |
+| --- | --- |
+| [frontend-file-structure](skills/frontend-file-structure/SKILL.md) | Use for React TypeScript file-structure work involving ownership or folders for new or moved files, multi-file components with narrow public entries, page and route separation, mirrored tests, path naming, import aliases, or directory-tree review. Trigger only when placement is unresolved or structure must change. Do not use for UI, logic, performance, security, upgrades, or debugging, or for code and tests whose path and structure are already established. |
 
 <!-- skills:end -->
 
