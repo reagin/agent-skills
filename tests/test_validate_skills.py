@@ -116,7 +116,7 @@ class ValidatorBehaviorTests(unittest.TestCase):
         issues = validator.validate_repository(self.root, fix=True)
 
         self.assertEqual([], issues)
-        self.assertIn("[code-review](skills/code-review/)", self.readme())
+        self.assertIn("[code-review](skills/code-review/SKILL.md)", self.readme())
 
     def test_block_scalar_description_is_supported(self):
         self.write_block_description_skill()

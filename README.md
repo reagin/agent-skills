@@ -41,8 +41,9 @@ The Codex and Claude Code plugin manifests both point to the same `skills/` dire
 
 | Skill | Description |
 | --- | --- |
-| [frontend-file-structure](skills/frontend-file-structure/) | Use for React TypeScript file-structure work involving ownership or folders for new or moved files, multi-file components with narrow public entries, page and route separation, mirrored tests, path naming, import aliases, or directory-tree review. Trigger only when placement is unresolved or structure must change. Do not use for UI, logic, performance, security, upgrades, or debugging, or for code and tests whose path and structure are already established. |
-| [grill-me](skills/grill-me/) | A relentless interview to sharpen a plan, decision, or design. Use when the user wants to stress-test their thinking or uses any "grill" trigger phrase such as "grill me", "grill my plan", or "poke holes in this". |
+| [apple-design](skills/apple-design/SKILL.md) | Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing gesture-driven UI, spring animations, drag/swipe/sheet interactions, momentum and interruptible transitions, translucent materials and depth, typography (optical sizing, tracking, leading), reduced-motion, or the design foundations (feedback, spatial consistency, restraint) behind Apple-style interfaces. |
+| [frontend-file-structure](skills/frontend-file-structure/SKILL.md) | Use for React TypeScript file-structure work involving ownership or folders for new or moved files, multi-file components with narrow public entries, page and route separation, mirrored tests, path naming, import aliases, or directory-tree review. Trigger only when placement is unresolved or structure must change. Do not use for UI, logic, performance, security, upgrades, or debugging, or for code and tests whose path and structure are already established. |
+| [grill-me](skills/grill-me/SKILL.md) | A relentless interview to sharpen a plan, decision, or design. Use when the user wants to stress-test their thinking or uses any "grill" trigger phrase such as "grill me", "grill my plan", or "poke holes in this". |
 
 <!-- skills:end -->
 

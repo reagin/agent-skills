@@ -247,7 +247,7 @@ def render_catalog(skills: Sequence[Skill]) -> str:
     for skill in sorted(skills, key=lambda item: item.name):
         description = skill.description.replace("|", "\\|")
         rows.append(
-            f"| [{skill.name}](skills/{skill.directory.name}/) | {description} |"
+            f"| [{skill.name}](skills/{skill.directory.name}/SKILL.md) | {description} |"
         )
     return "\n".join(rows)
 
